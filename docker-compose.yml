@@ -1,0 +1,10 @@
+services:
+  ai_service:
+    build: .
+    image: ai_service
+    volumes:
+      - ./:/app
+    ports:
+      - "8001:8000"
+    env_file:
+      - .env
